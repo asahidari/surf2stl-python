@@ -5,7 +5,7 @@ Export a surface to a STL(Stereolithography) file.
 ## Description
 Functions in this script (write, tri_write) can export 3d surface to a STL (Stereolithography) format file. This is the python version of [surf2stl.m](https://jp.mathworks.com/matlabcentral/fileexchange/4512-surf2stl) in MATLAB (or Octave).
 
-Exported file can be imported in various 3d software tools (like Blender, Meshlab, etc.)
+Exported files can be imported in various 3d software tools (like Blender, Meshlab, etc.)
 
 ## Installation
 clone this repository
