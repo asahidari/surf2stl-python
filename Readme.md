@@ -11,7 +11,7 @@ Exported file can be imported in various 3d software tools (like Blender, Meshla
 clone this repository
 
 ```Bash
-git clone ...
+git clone https://github.com/asahidari/surf2stl-python
 ```
 
 ## Usage
