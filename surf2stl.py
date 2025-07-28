@@ -217,6 +217,9 @@ def local_write_facet(f, p1, p2, p3, mode):
             return 0;
 
     n = local_find_normal(p1, p2, p3)
+    if len(n) == 0:
+        return 0
+
     if mode == 'ascii':
         f.write('facet normal %.7f %.7f %.7f\n' % (n[0], n[1], n[2]))
         f.write('outer loop\n')
@@ -237,6 +240,11 @@ def local_find_normal(p1, p2, p3):
     v1 = p2 - p1
     v2 = p3 - p1
     v3 = np.cross(v1, v2)
-    n = v3 / math.sqrt(np.sum(v3*v3))
+
+    denominator = math.sqrt(np.sum(v3*v3))
+    if denominator == 0:
+        return np.zeros(3)
+
+    n = v3 / denominator
     return n
 
